@@ -1,19 +1,7 @@
-<h1>Hola DBZ</h1>
+<h1 class="font-weight-bold">Dragon Ball Z</h1>
 <hr>
 
-<div class="row">
-  <div class="col">
-    <h4>
-      Listado
-    </h4>
-    <ul>
-      <li>Krillin - 200</li>
-      <li>Goku - 500</li>
-
-    </ul>
-  </div>
-  <div class="col">
-
-  </div>
-
+<div class="container">
+  <app-dbz-list [characterList]="characters" (onDeleteCharacter)="onDeleteCaharacter($event)"></app-dbz-list>
+  <app-add-character-form (onNewCharacter)="onNewCharacter($event)"></app-add-character-form>
 </div>

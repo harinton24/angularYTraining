@@ -1,0 +1,27 @@
+<div class="col">
+  <h4>Agregar personaje</h4>
+  <form class="row"(ngSubmit)="saveCharacter()">
+    <div class="form-group mb-4">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="character.name"
+        class="form-control"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="exampleInputPassword1">Poder</label>
+      <input
+        type="number"
+        name="power"
+        [(ngModel)]="character.power"
+        class="form-control"
+        placeholder="Poder"
+      />
+    </div>
+    <button class="btn btn-primary mt-4">Agregar</button>
+  </form>
+  {{character | json}}
+</div>
